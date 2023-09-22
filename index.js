@@ -17,8 +17,8 @@ async function run() {
   }
 
   if (app) {
-    core.info(`TEST ADRIANO`);
-    
+    core.info(`TEST ADRIANO with proxy : ${httpsProxy}`);
+
     core.info(`Found GitHub Application: ${app.name}`);
 
     try {
