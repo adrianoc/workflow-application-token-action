@@ -1,6 +1,2 @@
-# IntelliJ IDEA
-.idea
-*.iml
-
-# Node.js / npm
-node_modules
+package-lock.json
+package.json
