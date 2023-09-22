@@ -16442,7 +16442,13 @@ async function run() {
   }
 
   if (app) {
-    core.info(`TEST ADRIANO with proxy : ${httpsProxy}`);
+    core.info(`TEST ADRIANO with`);
+    if (httpsProxy) {
+      core.info(`-----> ${httpsProxy}`);
+    }
+    else {
+      core.info(`httpsProxy not defined!`);
+    }
 
     core.info(`Found GitHub Application: ${app.name}`);
 
