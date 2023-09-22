@@ -17,6 +17,8 @@ async function run() {
   }
 
   if (app) {
+    core.info(`TEST ADRIANO`);
+    
     core.info(`Found GitHub Application: ${app.name}`);
 
     try {
