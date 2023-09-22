@@ -15,6 +15,13 @@ const jwt = __nccwpck_require__(6909)
 module.exports.create = (privateKey, applicationId, baseApiUrl, timeout, proxy) => {
   const app = new GitHubApplication(privateKey, applicationId, baseApiUrl);
 
+  if (proxy !== undefined) {
+    core.info(`-----> ${proxy}`);
+  }
+  else {
+    core.info(`proxy not defined!`);
+  }
+
   return app.connect(timeout, proxy)
     .then(() => {
       return app;
@@ -16443,12 +16450,6 @@ async function run() {
 
   if (app) {
     core.info(`TEST ADRIANO with`);
-    if (httpsProxy !== undefined) {
-      core.info(`-----> ${httpsProxy}`);
-    }
-    else {
-      core.info(`httpsProxy not defined!`);
-    }
 
     core.info(`Found GitHub Application: ${app.name}`);
 
