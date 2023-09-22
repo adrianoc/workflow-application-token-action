@@ -18,7 +18,7 @@ async function run() {
 
   if (app) {
     core.info(`TEST ADRIANO with`);
-    if (httpsProxy) {
+    if (httpsProxy !== undefined) {
       core.info(`-----> ${httpsProxy}`);
     }
     else {
